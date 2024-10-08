@@ -39,6 +39,12 @@ register_nav_menus(
   array("primary-menu" => "Top Menu")
 );
 
+//remove post option
+function remove_posts_menu() {
+  remove_menu_page( 'edit.php' ); // This is the menu slug for Posts
+}
+add_action( 'admin_menu', 'remove_posts_menu' );
+
 //condition for option pages
 if (function_exists('acf_add_options_page')) {
   acf_add_options_page(array(
@@ -123,3 +129,4 @@ function create_custom_taxonomy_category() {
   register_taxonomy( 'category', array( 'products' ), $args );
 }
 add_action( 'init', 'create_custom_taxonomy_category' );
+
