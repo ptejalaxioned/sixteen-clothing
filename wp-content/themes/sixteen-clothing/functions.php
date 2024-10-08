@@ -62,3 +62,35 @@ if (function_exists('acf_add_options_page')) {
 
 require_once 'functions/func-acf-block-register.php';
 
+//Custom Post Type Products
+function create_custom_post_type_products() {
+  $labels = array(
+      'name'               => __( 'Products' ),
+      'singular_name'      => __( 'Product' ),
+      'menu_name'          => __( 'Products' ),
+      'name_admin_bar'     => __( 'Product' ),
+      'add_new'            => __( 'Add New' ),
+      'add_new_item'       => __( 'Add New Product' ),
+      'new_item'           => __( 'New Product' ),
+      'edit_item'          => __( 'Edit Product' ),
+      'view_item'          => __( 'View Product' ),
+      'all_items'          => __( 'All Products' ),
+      'search_items'       => __( 'Search Products' ),
+      'not_found'          => __( 'No Products found.' ),
+      'not_found_in_trash' => __( 'No Products found in Trash.' ),
+  );
+
+  $args = array(
+      'labels'             => $labels,
+      'public'             => true,
+      'has_archive'        => true,
+      'rewrite'            => array( 'slug' => 'products' ),
+      'supports'           => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+      'show_in_rest'       => true, // Enables Gutenberg editor
+      'menu_position'      => 5,
+      'menu_icon'          => 'dashicons-cart', 
+  );
+
+  register_post_type( 'products', $args );
+}
+add_action( 'init', 'create_custom_post_type_products' );
