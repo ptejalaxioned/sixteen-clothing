@@ -201,10 +201,24 @@ li {
   box-sizing: border-box;
 }
 
+.single-caps::first-letter {
+  text-transform: uppercase;
+}
+
 html {
   margin-top: 0px;
 }
-
+.nav-list li {
+  text-transform: capitalize;
+  padding: 1.25rem 0.75rem;
+  font-size: 0.75rem;
+  border: 4px solid var(--orangered);
+  display: inline-block;
+  text-decoration: none;
+}
+.hamburger{
+  display: none;
+}
 /*=================================
   Header styling starts here
 =================================*/
