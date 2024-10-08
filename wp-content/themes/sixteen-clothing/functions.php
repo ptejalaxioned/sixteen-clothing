@@ -130,3 +130,46 @@ function create_custom_taxonomy_category() {
 }
 add_action( 'init', 'create_custom_taxonomy_category' );
 
+//linkAttributes Function
+function linkAttributes($link, $class, $content = "")
+{
+  $link_url = $link['url'];
+  if ($link_url == home_url().'/') {
+    $link_url =home_url() ;
+  }
+  $link_target = $link['target'];
+  $link_title = $link['title'];
+
+  if ($link_title == "Email" || $link_title == "Phone Number") {
+    $content = $link_url;
+  }
+
+  if ($content == "") {
+    $content = $link_title;
+  }
+
+  if ($link_target == "_blank") {
+    $rel = "rel='noopener noreferrer'";
+    $anchorTag = "<a href=\"$link_url\" 
+                     target=\"$link_target\" 
+                     class=\"$class\" 
+                     title=\"$link_title\" 
+                     $rel>
+                      $content
+                 </a>";
+    if ($link_title == "Email") {
+      $anchorTag  = substr_replace($anchorTag, "mailto:", 9, 0);
+    } else if ($link_title == "Phone Number") {
+      $anchorTag  = substr_replace($anchorTag, "tel:", 9, 0);
+    }
+  } else if ($link_target == "") {
+    $link_target = "_self";
+    $anchorTag = "<a href=\"$link_url\" 
+                     target=\"$link_target\" 
+                     class=\"$class\" 
+                     title=\"$link_title\">
+                     $content
+                 </a>";
+  }
+  return $anchorTag;
+}
