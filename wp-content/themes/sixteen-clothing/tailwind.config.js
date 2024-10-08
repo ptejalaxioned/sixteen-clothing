@@ -10,4 +10,15 @@ module.exports = {
     "./single-post.php",
     "./footer.php",
   ],
+  theme: {
+    extend: {
+      colors: {
+        skyblue: '#3d9ed1',
+        graywhite:'#f4f4f4',
+      },
+      width:{
+        cardwidth:'32%',
+      }
+    },
+  },
 }
