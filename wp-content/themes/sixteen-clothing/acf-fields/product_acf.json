@@ -1,0 +1,256 @@
+[
+    {
+        "key": "group_670521761d99a",
+        "title": "Product Block",
+        "fields": [
+            {
+                "key": "field_670521766e84d",
+                "label": "Product Upperside Features",
+                "name": "product_upperside_features",
+                "aria-label": "",
+                "type": "radio",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "Heading": "Heading",
+                    "View more": "View more",
+                    "Filter": "Filter",
+                    "Search": "Search",
+                    "Heading & View more": "Heading & View more",
+                    "Filter & Search": "Filter & Search"
+                },
+                "default_value": "",
+                "return_format": "value",
+                "allow_null": 0,
+                "other_choice": 0,
+                "layout": "vertical",
+                "save_other_choice": 0
+            },
+            {
+                "key": "field_670523b1a7ba1",
+                "label": "Product Page Heading",
+                "name": "product_page_heading",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_670521766e84d",
+                            "operator": "==",
+                            "value": "Heading & View more"
+                        }
+                    ],
+                    [
+                        {
+                            "field": "field_670521766e84d",
+                            "operator": "==",
+                            "value": "Heading"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_670523d6a7ba2",
+                "label": "View More",
+                "name": "view_more",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_670521766e84d",
+                            "operator": "==",
+                            "value": "View more"
+                        }
+                    ],
+                    [
+                        {
+                            "field": "field_670521766e84d",
+                            "operator": "==",
+                            "value": "Heading & View more"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_670524bcae119",
+                "label": "Filter Tabs",
+                "name": "filter_tabs",
+                "aria-label": "",
+                "type": "taxonomy",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_670521766e84d",
+                            "operator": "==",
+                            "value": "Filter & Search"
+                        }
+                    ],
+                    [
+                        {
+                            "field": "field_670521766e84d",
+                            "operator": "==",
+                            "value": "Filter"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "taxonomy": "category",
+                "add_term": 1,
+                "save_terms": 0,
+                "load_terms": 0,
+                "return_format": "id",
+                "field_type": "multi_select",
+                "allow_null": 0,
+                "bidirectional": 0,
+                "multiple": 0,
+                "bidirectional_target": []
+            },
+            {
+                "key": "field_670524f3ae11b",
+                "label": "Search Placeholder",
+                "name": "search_placeholder",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_670521766e84d",
+                            "operator": "==",
+                            "value": "Filter & Search"
+                        }
+                    ],
+                    [
+                        {
+                            "field": "field_670521766e84d",
+                            "operator": "==",
+                            "value": "Search"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_6705251bae11d",
+                "label": "Product Downside Heading",
+                "name": "product_downside_heading",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67052595ae11e",
+                "label": "Product Downside Paragraph",
+                "name": "product_downside_paragraph",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "rows": "",
+                "placeholder": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_670525a6ae11f",
+                "label": "Purches Now Link",
+                "name": "purches_now_link",
+                "aria-label": "",
+                "type": "link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/products"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]
