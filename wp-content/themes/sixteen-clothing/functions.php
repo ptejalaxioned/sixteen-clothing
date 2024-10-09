@@ -23,11 +23,7 @@ function my_theme_enqueue_scripts()
   wp_enqueue_style('tailwindcss', get_template_directory_uri() . '/src/output.css' , array(), '1.0', 'all');
 
   // Enqueue custom script
-<<<<<<< HEAD
-  wp_enqueue_script('custom-script', get_template_directory_uri() . '/assets/js/script.js', array('jquery'));
-=======
   wp_enqueue_script('custom-script', get_template_directory_uri() . '/assets/js/script-copy.js', array('jquery'));
->>>>>>> tp/sixteen-clothing-theme
 
   // Enqueue Font Awesome script
   wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/5edb8394fa.js', array(), null);
@@ -43,15 +39,12 @@ register_nav_menus(
   array("primary-menu" => "Top Menu")
 );
 
-<<<<<<< HEAD
-=======
 //remove post option
 function remove_posts_menu() {
   remove_menu_page( 'edit.php' ); // This is the menu slug for Posts
 }
 add_action( 'admin_menu', 'remove_posts_menu' );
 
->>>>>>> tp/sixteen-clothing-theme
 //condition for option pages
 if (function_exists('acf_add_options_page')) {
   acf_add_options_page(array(
@@ -75,8 +68,6 @@ if (function_exists('acf_add_options_page')) {
 
 require_once 'functions/func-acf-block-register.php';
 
-<<<<<<< HEAD
-=======
 //Custom Post Type Products
 function create_custom_post_type_products() {
   $labels = array(
@@ -273,4 +264,3 @@ function ajax_search_posts_by_title()
 }
 add_action('wp_ajax_search_posts_by_title', 'ajax_search_posts_by_title');
 add_action('wp_ajax_nopriv_search_posts_by_title', 'ajax_search_posts_by_title');
->>>>>>> tp/sixteen-clothing-theme
