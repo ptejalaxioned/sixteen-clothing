@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-</main>
-<!--main section end-->
-<!--footer section start-->
-<footer>
-  <div class="wrapper">
-  </div>
-</footer>
-<!--footer section end-->
-=======
 <?php
 $copyright_text=get_field('copyright_text','options');
 $reference_link=get_field('reference_link','options');
@@ -31,7 +21,6 @@ if($copyright_text || $reference_link){
 </footer>
 <!--footer section end-->
 <?php } ?>
->>>>>>> tp/sixteen-clothing-theme
 </div>
 <!--container end-->
 <?php wp_footer(); ?>
