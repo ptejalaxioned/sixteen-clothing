@@ -173,3 +173,4 @@ function linkAttributes($link, $class, $content = "")
   }
   return $anchorTag;
 }
+
