@@ -17,6 +17,9 @@ module.exports = {
         orangered:'#f33f3f',
         lightgray:'#f7f7f7',
       },
+      width:{
+      cardwidth:'32%',
+      }
     },
   },
 }
