@@ -2,6 +2,7 @@
 function my_acf_init()
 {
   register_acf_blocks('banner', 'banner', 'A custom banner block', '/inc/blocks/content-banner.php', 'admin-page');
+  register_acf_blocks('products', 'products', 'A custom products block', '/inc/blocks/content-products.php', 'admin-page');
 }
 
 function register_acf_blocks($slug, $title, $description, $template_loc, $icon)
