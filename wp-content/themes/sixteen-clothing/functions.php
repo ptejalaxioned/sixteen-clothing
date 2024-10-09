@@ -174,3 +174,93 @@ function linkAttributes($link, $class, $content = "")
   return $anchorTag;
 }
 
+
+//category filter
+add_action('wp_ajax_filter_posts_by_category', 'ajax_filter_posts_by_category');
+add_action('wp_ajax_nopriv_filter_posts_by_category', 'ajax_filter_posts_by_category');
+function ajax_filter_posts_by_category()
+{
+  $data = isset($_POST['data']) ? sanitize_text_field($_POST['data']) : '';
+
+  if ($data != "all") {
+    $args = array(
+      'post_type' => 'products',
+      'posts_per_page' => -1,
+      'tax_query' => array(
+        array(
+          'taxonomy' => 'category',
+          'field'    => 'slug',
+          'terms'    =>  $data,
+          'operator' => 'IN',
+        ),
+      ),
+    );
+  } else {
+    $args = array(
+      'post_type' => 'products',
+      'posts_per_page' => -1,
+      'tax_query' => array(
+        array(
+          'taxonomy' => 'category',
+          'field'    => 'slug',
+          'operator' => 'Exists',
+        ),
+      ),
+    );
+  }
+
+  $all_posts = new WP_Query($args);
+  $posts_data = array();
+  if ($all_posts->have_posts()) {
+    while ($all_posts->have_posts()) {
+      $all_posts->the_post();
+      $post_data = array(
+        'title' => get_the_title(),
+        'permalink' => get_the_permalink(),
+        'thumbnail' => has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'full') : '',
+        'content' => get_the_excerpt(),
+        'product_price' => get_field('price') ? get_field('product_price') : '',
+        'product_rating' => get_field('price') ? get_field('product_rating') : '',
+        'number_of_reviews' => get_field('price') ? get_field('number_of_reviews') : '',
+      );
+      $posts_data[] = $post_data;
+    }
+    wp_reset_postdata();
+  } else {
+    $posts_data = array('message' => 'No posts found.');
+  }
+  wp_send_json($posts_data);
+}
+
+// Search Post
+function ajax_search_posts_by_title()
+{
+  $data = isset($_POST['data']) ? sanitize_text_field($_POST['data']) : '';
+  $args = array(
+    'post_type' => 'products',
+    'posts_per_page' => -1,
+    's' =>  $data,
+  );
+  $all_posts = new WP_Query($args);
+  if ($all_posts->have_posts()) {
+    while ($all_posts->have_posts()) {
+      $all_posts->the_post();
+      $post_data = array(
+        'title' => get_the_title(),
+        'permalink' => get_the_permalink(),
+        'thumbnail' => has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'full') : '',
+        'content' => get_the_excerpt(),
+        'product_price' => get_field('price') ? get_field('product_price') : '',
+        'product_rating' => get_field('price') ? get_field('product_rating') : '',
+        'number_of_reviews' => get_field('price') ? get_field('number_of_reviews') : '',
+      );
+      $posts_data[] = $post_data;
+    }
+    wp_reset_postdata();
+  } else {
+    $posts_data = array('message' => 'No posts found.');
+  }
+  wp_send_json($posts_data);
+}
+add_action('wp_ajax_search_posts_by_title', 'ajax_search_posts_by_title');
+add_action('wp_ajax_nopriv_search_posts_by_title', 'ajax_search_posts_by_title');
