@@ -18,7 +18,7 @@
       <div class="wrapper flex">
         <div class="header-content flex justify-between items-center w-full">
           <?php $title = get_field('title_link', 'options');
-          $title_split = explode(" ", $title);
+          $title_split = explode(" ", $title['title']);
           $first_half = "";
           $second_half = "";
           $half_count = count($title_split) / 2;
@@ -28,9 +28,9 @@
           }
           ?>
           <h1>
-            <a href="./index.html" title="Gymer" class="uppercase flex gap-1 font-bold text-md " target="_self"><span
-                class="first-half-heading"><?php echo $first_half ?></span><span
-                class="second-half-heading text-orangered"><?php echo $second_half ?></span></a>
+            <?php echo linkAttributes($title, 'uppercase flex gap-1 font-bold text-md', '<span
+                class="first-half-heading">' . $first_half . '</span><span
+                class="second-half-heading text-orangered">' . $second_half . '</span>'); ?>
           </h1>
           <nav>
             <?php wp_nav_menu(array("theme_location" => "primary-menu", "menu_class" => "nav-list",))
