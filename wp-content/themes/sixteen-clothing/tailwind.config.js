@@ -19,7 +19,13 @@ module.exports = {
       },
       width:{
       cardwidth:'32%',
-      }
+      },
+      textIndent:{
+        textindent:'-9999px',
+      },
+      screens: {
+        'xs': '360px', 
+      },
     },
   },
 }
