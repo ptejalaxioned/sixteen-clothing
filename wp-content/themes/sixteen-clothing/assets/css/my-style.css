@@ -208,6 +208,7 @@ li {
 html {
   margin-top: 0px;
 }
+
 .nav-list li {
   text-transform: capitalize;
   padding: 1.25rem 0.75rem;
@@ -231,9 +232,11 @@ html {
 .nav-list li:hover {
   border-bottom: 2px solid #f33f3f;
 }
-.hamburger{
+
+.hamburger {
   display: none;
 }
+
 /*=================================
   Header styling ends here
 =================================*/
@@ -244,11 +247,11 @@ html {
 /*=================================
   main styling starts here
 =================================*/
-.product-list .product{
+.product-list .product {
   border: 1px solid #8080803a;
 }
 
-.border-bottom{
+.border-bottom {
   border-bottom: 1px solid #8080803a;
 }
 
@@ -264,6 +267,7 @@ html {
   content: "$";
   font-family: "fontAwesome";
 }
+
 /*=================================
   main styling ends here
 =================================*/
@@ -287,29 +291,29 @@ html {
     gap: 3px;
     transform: translateY(-6px);
   }
-  
+
   .line {
     width: 25px;
     display: flex;
     line-height: 4px;
     text-indent: -9999px;
   }
-  
+
   .line2-onclick {
     display: none;
     transition: all 1s;
   }
-  
+
   .line1-onclick {
     transform: rotate(-45deg) translateX(-2px);
     transition: transform 1s;
   }
-  
+
   .line3-onclick {
     transform: rotate(45deg) translateX(0px);
     transition: transform 1s;
   }
-  
+
   .line::before {
     content: '';
     width: 17px;
@@ -317,7 +321,7 @@ html {
     border-radius: 2px;
     display: inline-block;
   }
-  
+
   .nav-list {
     width: 100%;
     height: 100vh;
@@ -335,49 +339,60 @@ html {
     transform: translateX(-1000px);
     transition: all 1s;
   }
+
   .nav-list-onclick {
     transform: translateX(0px);
     transition: all 1s;
   }
-  .wrapper{
+
+  .wrapper {
     width: 85%;
   }
-  .categories-list{
-    flex-wrap:wrap ;
+
+  .categories-list {
+    flex-wrap: wrap;
   }
+
   .filter-search {
     flex-direction: column;
   }
-  .product-list{
+
+  .product-list {
     flex-direction: column;
   }
-  .product-list .product{
-  width: 100%;
+
+  .product-list .product {
+    width: 100%;
   }
-  .product-down{
+
+  .product-down {
     flex-direction: column;
     gap: 10px;
   }
-  .product-down-left{
-align-items: center;
+
+  .product-down-left {
+    align-items: center;
   }
+
   .banner-content {
     width: 100%;
   }
-.heading-view{
-  flex-direction: column;
-}
+
+  .heading-view {
+    flex-direction: column;
+  }
 }
 
 /*media query for 995px starts here*/
 @media only screen and (max-width: 375px) {
 
-.nav-list{
-  display: none;
-}
-.search-div{
-  width: 100%;
+  .nav-list {
+    display: none;
+  }
 
-}
+  .search-div {
+    width: 100%;
+
+  }
 
 }
