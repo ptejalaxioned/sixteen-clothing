@@ -14,22 +14,26 @@ if ($product_upperside_features || $product_downside_heading || $product_downsid
     <div class="wrapper pt-16 pb-10">
       <?php if ($product_upperside_features) { ?>
         <?php if ($product_upperside_features == "Heading & View more" || $product_upperside_features == "Heading" || $product_upperside_features == "View more") { ?>
-          <div class="heading-view flex border-bottom product-up justify-between items-center pb-2">
             <?php if ($product_upperside_features == "Heading & View more") { ?>
+              <div class="heading-view flex border-bottom product-up justify-between items-center pb-2">
               <h3 class="capitalize font-bold text-lg"><?php echo $product_page_heading ?></h3>
               <span class="uppercase text-xs text-orangered font-bold"><?php echo $view_more ?></span>
+              </div>
             <?php } ?>
             <?php if ($product_upperside_features == "Heading") { ?>
+              <div class="heading-view flex border-bottom product-up justify-between items-center pb-2">
               <h3 class="capitalize font-bold text-lg"><?php echo $product_page_heading ?></h3>
+              </div>
             <?php } ?>
             <?php if ($product_upperside_features == "View more") { ?>
+              <div class="heading-view flex border-bottom product-up justify-between items-center pb-2">
               <span class="uppercase text-xs text-orangered font-bold"><?php echo $view_more ?></span>
+              </div>
             <?php } ?>
-          </div>
         <?php } ?>
         <?php if ($product_upperside_features == "Filter & Search" || $product_upperside_features == "Filter" || $product_upperside_features == "Search") { ?>
-          <div class="filter-search border-bottom product-up flex justify-between items-center pb-2">
             <?php if ($product_upperside_features == "Filter & Search") { ?>
+              <div class="filter-search border-bottom product-up flex justify-between items-center pb-2">
               <?php if ($tabs) { ?>
                 <ul class="categories-list flex">
                   <li>
@@ -49,8 +53,10 @@ if ($product_upperside_features || $product_downside_heading || $product_downsid
               <div class="search-div  w-3/12 ">
                 <input type="text" class="search-name w-full h-8 p-2 text-sm border border-gray-500 rounded-md" placeholder="<?php echo $search_placeholder; ?>" />
               </div>
+              </div>
             <?php } ?>
             <?php if ($product_upperside_features == "Filter") { ?>
+              <div class="filter-search border-bottom product-up flex justify-between items-center pb-2">
               <?php if ($tabs) { ?>
                 <ul class="categories-list flex">
                   <li>
@@ -67,12 +73,14 @@ if ($product_upperside_features || $product_downside_heading || $product_downsid
                   <?php } ?>
                 </ul>
               <?php } ?>
+              </div>
             <?php } ?>
             <?php if ($product_upperside_features == "Search") { ?>
+              <div class="filter-search border-bottom product-up flex justify-between items-center pb-2">
               <div class="search-div  w-3/12">
                 <input type="text" class="search-name w-full h-8 p-2 text-sm border border-gray-500 rounded-md" placeholder="<?php echo $search_placeholder; ?>" />
               </div>
-          </div>
+              </div>
         <?php } ?>
       <?php } ?>
     <?php } ?>
