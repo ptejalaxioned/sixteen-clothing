@@ -1,0 +1,92 @@
+[
+    {
+        "key": "group_6705261cc4502",
+        "title": "Post Styling",
+        "fields": [
+            {
+                "key": "field_6705266aad5e5",
+                "label": "Product Price",
+                "name": "product_price",
+                "aria-label": "",
+                "type": "number",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "min": "",
+                "max": "",
+                "placeholder": "",
+                "step": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_67052689ad5e6",
+                "label": "Product Rating",
+                "name": "product_rating",
+                "aria-label": "",
+                "type": "number",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "min": "",
+                "max": "",
+                "placeholder": "",
+                "step": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_670526b3ad5e7",
+                "label": "Number of Reviews",
+                "name": "number_of_reviews",
+                "aria-label": "",
+                "type": "number",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "min": "",
+                "max": "",
+                "placeholder": "",
+                "step": "",
+                "prepend": "",
+                "append": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "products"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

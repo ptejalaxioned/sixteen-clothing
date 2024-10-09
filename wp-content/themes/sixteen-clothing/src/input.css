@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .wrapper {
+    @apply max-w-screen-2xl w-7/12 mx-auto;
+  }
+
+  .stars {
+    @apply flex gap-0.5;
+  }
+
+  .stars li {
+    @apply flex indent-textindent text-xs;
+  }
+}
