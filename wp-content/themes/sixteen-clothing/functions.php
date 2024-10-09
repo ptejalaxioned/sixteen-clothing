@@ -23,7 +23,7 @@ function my_theme_enqueue_scripts()
   wp_enqueue_style('tailwindcss', get_template_directory_uri() . '/src/output.css' , array(), '1.0', 'all');
 
   // Enqueue custom script
-  wp_enqueue_script('custom-script', get_template_directory_uri() . '/assets/js/script.js', array('jquery'));
+  wp_enqueue_script('custom-script', get_template_directory_uri() . '/assets/js/script-copy.js', array('jquery'));
 
   // Enqueue Font Awesome script
   wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/5edb8394fa.js', array(), null);
